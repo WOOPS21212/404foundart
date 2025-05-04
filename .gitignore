@@ -20,3 +20,4 @@ yarn-error.log*
 .Spotlight-V100
 .Trashes 
 .vercel
+.env*.local

@@ -3,9 +3,21 @@
   "version": "1.0.0",
   "description": "Landing page for 404found.art",
   "scripts": {
-    "start": "live-server --port=3000 --no-browser"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "autoprefixer": "^10.4.21",
+    "live-server": "^1.2.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.5"
+  },
+  "dependencies": {
+    "@vercel/blob": "^0.22.1",
+    "next": "^14.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
