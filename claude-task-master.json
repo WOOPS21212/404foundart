@@ -1,0 +1,64 @@
+{
+  "project": "404found.art Landing Page",
+  "tasks": [
+    {
+      "name": "Start Development Server",
+      "command": "npm start",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart",
+      "autostart": true
+    },
+    {
+      "name": "Git Status",
+      "command": "git status",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Commit Changes",
+      "command": "git add . && git commit -m \"Update landing page\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Push to GitHub",
+      "command": "git push origin main",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Install Dependencies",
+      "command": "npm install",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Optimize Images",
+      "command": "find images -type f -name \"*.jpg\" -o -name \"*.png\" | xargs -I{} echo \"Optimize: {}\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Run Lighthouse Audit",
+      "command": "echo \"Run Lighthouse audit on http://localhost:3000\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Clean Build",
+      "command": "rm -rf node_modules && npm install",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart"
+    },
+    {
+      "name": "Change Vanta Background Color",
+      "command": "echo \"Update the color value in index.html VANTA.TOPOLOGY configuration\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart",
+      "note": "Current color: 0x3fa9f5 (blue)"
+    },
+    {
+      "name": "Switch Vanta Effect",
+      "command": "echo \"Replace 'topology' in the script URL and VANTA init with another effect name\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart",
+      "note": "Current: topology. Options: birds, cells, clouds, dots, fog, globe, halo, net, rings, trunk, waves"
+    },
+    {
+      "name": "Try Different Topology Colors",
+      "command": "echo \"Update color and backgroundColor in VANTA.TOPOLOGY settings\"",
+      "directory": "/Users/amc/Documents/404notfound-art/404foundart",
+      "note": "Try color: 0xff3366 (pink) or 0x00ffcc (teal) with backgroundColor: 0x111111 (dark)"
+    }
+  ]
+}

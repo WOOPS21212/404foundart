@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanta.js Direct Implementation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+    }
+    .buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 2;
+    }
+    button {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 1px solid white;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>404found.art</h1>
+  <div class="buttons">
+    <button onclick="window.location.href='index.html'">Main Page</button>
+    <button onclick="window.location.href='test-vanta.html'">Test Page</button>
+  </div>
+  
+  <!-- THREE.js and Vanta.js scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+  
+  <script>
+    VANTA.WAVES({
+      el: document.body,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x3fa9f5,
+      shininess: 30,
+      waveHeight: 15,
+      waveSpeed: 1.0,
+      zoom: 0.75
+    })
+  </script>
+</body>
+</html>

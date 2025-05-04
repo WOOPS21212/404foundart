@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404found.art | Coming Soon</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background element for Vanta.js -->
+    <div id="my-background"></div>
+    
+    <div class="content-wrapper">
+        <div class="container">
+            <h1>404found.art</h1>
+            <p>Please wait, I'm building.</p>
+            <div class="loading-indicator">
+                <span class="dot" style="--i: 1"></span>
+                <span class="dot" style="--i: 2"></span>
+                <span class="dot" style="--i: 3"></span>
+            </div>
+            <div class="task-manager">
+                <div class="task-container hidden" id="task-container">
+                    <h2>Project Tasks</h2>
+                    <ul id="task-list"></ul>
+                </div>
+                <button id="toggle-tasks" class="toggle-button">
+                    <i class="fas fa-tasks"></i> <span>Show Tasks</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load task manager -->
+    <script src="js/taskmanager.js"></script>
+    
+    <!-- THREE.js and Vanta.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+    
+    <!-- Initialize Vanta.js -->
+    <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        VANTA.WAVES({
+            el: document.querySelector('#my-background'),
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x89964e,
+            shininess: 30,
+            waveHeight: 15,
+            waveSpeed: 1.0,
+            zoom: 0.75
+        });
+    });
+    </script>
+</body>
+</html>

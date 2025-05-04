@@ -1,0 +1,11 @@
+{
+  "name": "404foundart",
+  "version": "1.0.0",
+  "description": "Landing page for 404found.art",
+  "scripts": {
+    "start": "live-server --port=3000 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

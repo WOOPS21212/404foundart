@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanta.js Test</title>
+    <link rel="stylesheet" href="test-vanta.css">
+</head>
+<body>
+    <div id="vanta-bg"></div>
+    <div class="content">
+        <h1>Vanta.js Test</h1>
+        <p>This is a test to ensure Vanta.js is working properly.</p>
+        <div class="buttons">
+            <button onclick="window.location.href='index.html'">Main Page</button>
+            <button onclick="window.location.href='vanta-direct.html'">Waves Effect</button>
+            <button onclick="changeEffect()">Change Color</button>
+        </div>
+    </div>
+    
+    <!-- THREE.js and Vanta.js scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+    
+    <script>
+        let vantaEffect;
+        
+        // Initialize Vanta.js
+        vantaEffect = VANTA.WAVES({
+            el: document.querySelector('#vanta-bg'),
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff0000,
+            shininess: 30,
+            waveHeight: 15,
+            waveSpeed: 1.0,
+            zoom: 0.75
+        });
+        
+        // Function to change the effect's color
+        function changeEffect() {
+            if (vantaEffect) {
+                vantaEffect.setOptions({
+                    color: getRandomColor()
+                });
+            }
+        }
+        
+        // Helper function to generate random colors
+        function getRandomColor() {
+            return Math.floor(Math.random() * 16777215);
+        }
+    </script>
+</body>
+</html>
